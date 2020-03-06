@@ -9,8 +9,13 @@ if ENV == "dev":
 else:
     app.debug = False
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        name = request.form["name"]
+        email = request.form["email"]
+        naslov = request.form["naslov"]
+        poruka = request.form["poruka"]
     return render_template("index.html")
 
 if __name__ == "__main__":
