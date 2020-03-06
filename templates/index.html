@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static\assets\css\main.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
     <title>Portfolio</title>
   </head>
   <body>
@@ -93,22 +96,62 @@
           </div> -->
         </div>
         <div class="icons">
-          <div><img src="static\assets\img\github.svg" alt="github" /></div>
-          <div><img src="static\assets\img\in.svg" alt="in" /></div>
-          <div><img src="static\assets\img\f.svg" alt="f" /></div>
+          <div>
+            <img
+              src="{{ url_for('static', filename='img/github.svg') }}"
+              alt="github"
+            />
+          </div>
+          <div>
+            <img
+              src="{{ url_for('static', filename='img/in.svg') }}"
+              alt="in"
+            />
+          </div>
+          <div>
+            <img src="{{ url_for('static', filename='img/f.svg') }}" alt="f" />
+          </div>
         </div>
-        <img src="static\assets\img\editor.svg" alt="editor" class="editor" />
+        <img
+          src="{{ url_for('static', filename='img/editor.svg') }}"
+          alt="editor"
+          class="editor"
+        />
       </div>
     </div>
     <div id="technologies">
-      <img src="static\assets\img\technologies\html.svg" alt="" />
-      <img src="static\assets\img\technologies\css.svg" alt="" />
-      <img src="static\assets\img\technologies\js.svg" alt="" />
-      <img src="static\assets\img\technologies\nodejs.svg" alt="" />
-      <img src="static\assets\img\technologies\python.svg" alt="" />
-      <img src="static\assets\img\technologies\django.svg" alt="" />
-      <img src="static\assets\img\technologies\flask.svg" alt="" />
-      <img src="static\assets\img\technologies\postgresql.svg" alt="" />
+      <img
+        src="{{ url_for('static', filename='img/technologies/html.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/css.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/js.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/nodejs.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/python.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/django.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/flask.svg') }}"
+        alt=""
+      />
+      <img
+        src="{{ url_for('static', filename='img/technologies/postgresql.svg') }}"
+        alt=""
+      />
     </div>
     <div id="about">
       <div class="container">
@@ -126,7 +169,10 @@
           </div>
 
           <div id="flat">
-            <img src="static\svg\ermin-flat.svg" alt="" />
+            <img
+              src="{{ url_for('static', filename='svg/ermin-flat.svg') }}"
+              alt=""
+            />
           </div>
           <div id="designer">
             <h1>dizajner</h1>
@@ -240,7 +286,10 @@
           <div class="usluge-grid-second">
             <div class="usluge-unit">
               <div class="usluge-margin">
-                <img src="static\svg\webdev-combined.svg" alt="webdev" />
+                <img
+                  src="{{ url_for('static', filename='svg/webdev-combined.svg') }}"
+                  alt="webdev"
+                />
                 <h3 class="heading">
                   Web Development
                   <span class="divider-no-animation"></span>
@@ -253,7 +302,10 @@
             </div>
             <div class="usluge-unit">
               <div class="usluge-margin">
-                <img src="static\svg\development.svg" alt="webdev" />
+                <img
+                  src="{{ url_for('static', filename='svg/development.svg') }}"
+                  alt="webdev"
+                />
                 <h3 class="heading tex">
                   Development
                   <span class="divider-no-animation"></span>
@@ -266,7 +318,10 @@
             </div>
             <div class="usluge-unit">
               <div class="usluge-margin">
-                <img src="static\svg\ui-ux.svg" alt="webdev" />
+                <img
+                  src="{{ url_for('static', filename='svg/ui-ux.svg') }}"
+                  alt="webdev"
+                />
                 <h3 class="heading">
                   UI/UX Dizajn
                   <span class="divider-no-animation"></span>
@@ -279,7 +334,10 @@
             </div>
             <div class="usluge-unit">
               <div class="usluge-margin">
-                <img src="static\svg\graphic-design.svg" alt="webdev" />
+                <img
+                  src="{{ url_for('static', filename='svg/graphic-design.svg') }}"
+                  alt="webdev"
+                />
                 <h3 class="heading">
                   Grafički Dizajn
                   <span class="divider-no-animation"></span>
@@ -358,7 +416,11 @@
             </div>
           </div>
           <button class="form-button">
-            Pošalji <img src="static\assets\img\send-button.svg" alt="" />
+            Pošalji
+            <img
+              src="{{ url_for('static', filename='img/send-button.svg') }}"
+              alt=""
+            />
           </button>
         </form>
       </div>
@@ -369,6 +431,6 @@
       </div>
     </div>
 
-    <script src="static\assets\js\script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>
